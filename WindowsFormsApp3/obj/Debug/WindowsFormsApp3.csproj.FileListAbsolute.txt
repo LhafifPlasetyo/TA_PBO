@@ -26,3 +26,17 @@ C:\Users\lenovo\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.
 C:\Users\lenovo\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\lenovo\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\bin\Debug\login_tabel.mdf
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\bin\Debug\login_tabel_log.ldf
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Menuform.resources
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb

@@ -33,6 +33,7 @@ namespace WindowsFormsApp3
             username = txt_username.Text;
             u_password = txt_password.Text;
 
+
             SqlConnection conn = Konn.GetConn();    
             conn.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("Select * from account_table where USERNAME = '" + txt_username.Text + "'and PASSWORD = '" + txt_password.Text + "'", conn);
@@ -48,6 +49,8 @@ namespace WindowsFormsApp3
                 Menuform form2 = new Menuform();
                 form2.Show();
                 this.Hide();
+
+
             }
             else
             {
@@ -86,6 +89,13 @@ namespace WindowsFormsApp3
                 }
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
         }
     }
 }

@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp3
 {
-    internal class Customer
+    internal class Customer : Akun
     {
         public int JumlahTagihan = 0;
         public List<string> BarangPinjaman = new List<string>();
@@ -23,6 +23,11 @@ namespace WindowsFormsApp3
 
         }
 
+        public Customer(string username, string password)
+        {
+            UserName = username;
+            Password = password;
+        }
         
         
     }

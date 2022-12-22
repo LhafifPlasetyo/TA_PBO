@@ -10,7 +10,7 @@ namespace WindowsFormsApp3
     {
         //tiap login, data username sama notelp dari data base akan dipanggil
         //masuk ke dalam new object. jadi tiap login bakal bikin new object
-        public string userName;
+        public string UserName;
         public string Password;
     }
 }
