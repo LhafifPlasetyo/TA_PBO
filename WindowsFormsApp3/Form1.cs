@@ -15,29 +15,32 @@ namespace WindowsFormsApp3
     public partial class Form1 : Form
     {
         private SqlCommand cmd;
-        private DataSet ds;
-        private SqlDataAdapter da;
-        private SqlDataReader rd;
+        public static Form1 instance;
+        public TextBox txt1, txt2;
 
-        Koneksi Konn =  new Koneksi(); 
+
+        Koneksi Konn = new Koneksi();
 
         public Form1()
         {
             InitializeComponent();
+            instance = this;
+            txt1 = txt_username;
+            txt2 = txt_password;
         }
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            String username, u_password;
 
+            String username, u_password;
             username = txt_username.Text;
             u_password = txt_password.Text;
 
 
-            SqlConnection conn = Konn.GetConn();    
+            SqlConnection conn = Konn.GetConn();
             conn.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("Select * from account_table where USERNAME = '" + txt_username.Text + "'and PASSWORD = '" + txt_password.Text + "'", conn);
-            
+
             DataTable dTable = new DataTable();
             adapter.Fill(dTable);
 
@@ -65,7 +68,7 @@ namespace WindowsFormsApp3
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            if(txt_username.Text.Trim() == "" ^ txt_password.Text.Trim() == "")
+            if (txt_username.Text.Trim() == "" ^ txt_password.Text.Trim() == "")
             {
                 MessageBox.Show("Data tidak lengkap");
 
@@ -76,7 +79,7 @@ namespace WindowsFormsApp3
                 conn.Open();
                 try
                 {
-                    cmd = new SqlCommand("insert into account_table values ('" + txt_username.Text + "','" + txt_password.Text + "')", conn);
+                    cmd = new SqlCommand("insert into account_table values ('" + txt_username.Text + "','" + txt_password.Text + "','NULL')", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Akun berhasil di register");
                     txt_username.Clear();
@@ -99,4 +102,3 @@ namespace WindowsFormsApp3
         }
     }
 }
-

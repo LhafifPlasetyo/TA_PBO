@@ -40,10 +40,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.Data_Game = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,7 +99,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(456, 44);
+            this.pictureBox4.Location = new System.Drawing.Point(431, 43);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(95, 59);
             this.pictureBox4.TabIndex = 6;
@@ -106,7 +107,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(616, 42);
+            this.pictureBox5.Location = new System.Drawing.Point(580, 42);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(118, 69);
             this.pictureBox5.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(463, 117);
+            this.button4.Location = new System.Drawing.Point(438, 116);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 31);
             this.button4.TabIndex = 9;
@@ -134,7 +135,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(626, 123);
+            this.button5.Location = new System.Drawing.Point(590, 123);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 25);
             this.button5.TabIndex = 10;
@@ -160,17 +161,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Rental TV";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(154, 258);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 20);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(58, 389);
@@ -187,26 +177,48 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "Konfirmasi";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // Data_Game
             // 
             this.Data_Game.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data_Game.Location = new System.Drawing.Point(413, 205);
+            this.Data_Game.Location = new System.Drawing.Point(431, 173);
             this.Data_Game.Name = "Data_Game";
             this.Data_Game.RowHeadersWidth = 51;
             this.Data_Game.RowTemplate.Height = 24;
-            this.Data_Game.Size = new System.Drawing.Size(120, 161);
+            this.Data_Game.Size = new System.Drawing.Size(135, 161);
             this.Data_Game.TabIndex = 18;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(430, 340);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(136, 34);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "ClearItem";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(154, 251);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(102, 31);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Tambahkan";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Menuform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.Data_Game);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
@@ -247,9 +259,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView Data_Game;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

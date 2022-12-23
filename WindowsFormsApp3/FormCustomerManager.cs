@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
             textBox1.Text = " ";
             textBox2.Text = " ";
             textBox3.Text = " ";
-            textBox4.Text = " ";
+            
         }
 
         void TampilkanBarang()
@@ -78,7 +78,7 @@ namespace WindowsFormsApp3
 
         private void btn_Simpan_Click(object sender, EventArgs e)
         {
-            if ( textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "" )
+            if ( textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "")
             {
                 MessageBox.Show(" Invalid data details");
             }
@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
                 SqlConnection conn = Konn.GetConn(); 
                 try
                 {
-                    cmd = new SqlCommand ("insert into account_table values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')", conn);
+                    cmd = new SqlCommand ("insert into account_table values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text +"')", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Insert Data Berhasil");
@@ -109,8 +109,8 @@ namespace WindowsFormsApp3
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 textBox1.Text = row.Cells["USERNAME"].Value.ToString();
                 textBox2.Text = row.Cells["PASSWORD"].Value.ToString();
-                textBox3.Text = row.Cells["BarangPinjaman"].Value.ToString();
-                textBox4.Text = row.Cells["StatusPeminjaman"].Value.ToString();
+                textBox3.Text = row.Cells["ITEMLIST"].Value.ToString();
+                
             }
             catch (Exception X)
             {
@@ -118,37 +118,17 @@ namespace WindowsFormsApp3
             }
         }
 
-        private void btn_Update_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "")
-            {
-                MessageBox.Show(" Invalid data details");
-            }
-            else
-            {
-                SqlConnection conn = Konn.GetConn();
-                try
-                {
-                    cmd = new SqlCommand("update account_table Set PASSWORD='" + textBox2.Text + "',BarangPinjaman='" + textBox3.Text + "',StatusPeminjaman='" + textBox4.Text + "'where USERNAME='" + textBox4.Text + "'", conn);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("update Data Berhasil");
-                    TampilkanBarang();
-                    ClearText();
-
-                }
-                catch (Exception X)
-                {
-                    MessageBox.Show(X.ToString());
-                }
-            }
-        }
-
+       
         private void btn_Hapus_Click(object sender, EventArgs e)
         {
             SqlConnection conn = Konn.GetConn();
             {
-                cmd = new SqlCommand("Delete account_table where"
+                cmd = new SqlCommand("Delete account_table where USERNAME='" +textBox1.Text + "'", conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Hapus data berhasil");
+                TampilkanBarang();
+                ClearText();
             }
                
         }

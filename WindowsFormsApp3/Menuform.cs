@@ -14,21 +14,33 @@ namespace WindowsFormsApp3
 {
     public partial class Menuform : Form
     {
-        float tagihan;
+        float tagihan = 0;
+        string list_game;
         Koneksi Konn = new Koneksi();
         private SqlCommand cmd;
         private DataSet ds;
         private SqlDataAdapter da;
-        private SqlDataReader rd;
+        public static Menuform instance;
 
         public Menuform()
         {
             InitializeComponent();
+            clear_list();
+            string list_game = "";
+
+
         }
 
         private void Menuform_Load(object sender, EventArgs e)
         {
             view_list();
+            SqlConnection conn = Konn.GetConn();
+            conn.Open();
+            cmd = new SqlCommand("DELETE FROM item_list ", conn);
+            cmd.ExecuteNonQuery();
+            tagihan = 0;
+            textBox1.Text = tagihan.ToString();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,9 +49,9 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into Catalogue_Table values ('FIFA 23')", conn);
+                cmd = new SqlCommand("insert into item_list values ('FIFA 23')", conn);
                 cmd.ExecuteNonQuery();
-               
+
             }
             catch (Exception X)
             {
@@ -48,14 +60,13 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
+                list_game += "FIFA 23 , ";
+                plus_tagihan();
                 conn.Close();
             }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
 
         }
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,7 +79,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into Catalogue_Table values ('WWE 2K22')", conn);
+                cmd = new SqlCommand("insert into item_list values ('WWE 2K22')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -79,6 +90,8 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
+                list_game += "WWE 2K22 , ";
+                plus_tagihan();
                 conn.Close();
             }
         }
@@ -89,7 +102,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into Catalogue_Table values ('Naruto Ultimate Ninja Storm 4')", conn);
+                cmd = new SqlCommand("insert into item_list values ('Naruto Ultimate Ninja Storm 4')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -100,6 +113,8 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
+                list_game += "Naruto Ultimate Ninja Storm 4 , ";
+                plus_tagihan();
                 conn.Close();
             }
         }
@@ -110,9 +125,9 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into Catalogue_Table values ('eFootbal2022')", conn);
+                cmd = new SqlCommand("insert into item_list values ('eFootbal2022')", conn);
                 cmd.ExecuteNonQuery();
-               
+
             }
             catch (Exception X)
             {
@@ -121,6 +136,8 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
+                list_game += "eFootbal2022 , ";
+                plus_tagihan();
                 conn.Close();
             }
         }
@@ -131,7 +148,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into Catalogue_Table values ('GTA V')", conn);
+                cmd = new SqlCommand("insert into item_list values ('GTA V')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -142,6 +159,8 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
+                list_game += "GTA V, ";
+                plus_tagihan();
                 conn.Close();
             }
         }
@@ -152,7 +171,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("Select * from Catalogue_Table", conn);
+                cmd = new SqlCommand("Select * from item_list", conn);
                 ds = new DataSet();
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "Catalogue_Table");
@@ -166,6 +185,93 @@ namespace WindowsFormsApp3
             }
             finally
             {
+                conn.Close();
+            }
+        }
+
+        void plus_tagihan()
+        {
+            tagihan += 10000;
+            textBox1.Text = tagihan.ToString();
+
+        }
+
+        void clear_list()
+        {
+            SqlConnection conn = Konn.GetConn();
+
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("DELETE FROM item_list ", conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception X)
+            {
+                MessageBox.Show(X.ToString());
+            }
+            finally
+            {
+                view_list();
+                list_game = "";
+                tagihan = 0;
+                textBox1.Text = tagihan.ToString();
+                conn.Close();
+            }
+        }
+
+        
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection conn = Konn.GetConn();
+                string username, password;
+                username = Form1.instance.txt1.Text;
+                password = Form1.instance.txt2.Text;
+                conn.Open();
+                cmd = new SqlCommand("Update account_table Set USERNAME = '" + username + "',PASSWORD ='" + password + "',ITEMLIST ='" + list_game + "' where USERNAME = '" + username + "'", conn);
+                cmd.ExecuteNonQuery();
+            }
+
+            finally
+            {
+                MessageBox.Show("Transaksi Berhasil");
+                Form1 form_back = new Form1();
+                form_back.Show();
+                this.Hide();
+
+
+            }
+        }
+        //clear list
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            clear_list();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = Konn.GetConn();
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("insert into item_list values ('Sewa TV')", conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception X)
+            {
+                MessageBox.Show(X.ToString());
+            }
+            finally
+            {
+                view_list();
+                list_game += "Sewa TV, ";
+                tagihan += 30000;
+                textBox1.Text = tagihan.ToString();
                 conn.Close();
             }
         }

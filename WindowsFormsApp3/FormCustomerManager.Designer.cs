@@ -35,13 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btn_Simpan = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Hapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.login_tabelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logintabelDataSetBindingSource)).BeginInit();
@@ -96,15 +93,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "BarangPinjaman";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Status Peminjaman";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(158, 22);
@@ -126,14 +114,6 @@
             this.textBox3.Size = new System.Drawing.Size(239, 22);
             this.textBox3.TabIndex = 3;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(158, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 22);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // btn_Simpan
             // 
             this.btn_Simpan.Location = new System.Drawing.Point(123, 222);
@@ -144,19 +124,9 @@
             this.btn_Simpan.UseVisualStyleBackColor = true;
             this.btn_Simpan.Click += new System.EventHandler(this.btn_Simpan_Click);
             // 
-            // btn_Update
-            // 
-            this.btn_Update.Location = new System.Drawing.Point(277, 222);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(135, 47);
-            this.btn_Update.TabIndex = 6;
-            this.btn_Update.Text = "Update";
-            this.btn_Update.UseVisualStyleBackColor = true;
-            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
             // btn_Hapus
             // 
-            this.btn_Hapus.Location = new System.Drawing.Point(433, 222);
+            this.btn_Hapus.Location = new System.Drawing.Point(356, 222);
             this.btn_Hapus.Name = "btn_Hapus";
             this.btn_Hapus.Size = new System.Drawing.Size(135, 47);
             this.btn_Hapus.TabIndex = 7;
@@ -170,13 +140,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 615);
             this.Controls.Add(this.btn_Hapus);
-            this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Simpan);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -200,13 +167,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btn_Simpan;
-        private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Hapus;
     }
 }

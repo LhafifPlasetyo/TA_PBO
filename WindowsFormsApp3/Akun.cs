@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp3
 {
-    internal class Akun
+    public class Akun
     {
-        //tiap login, data username sama notelp dari data base akan dipanggil
-        //masuk ke dalam new object. jadi tiap login bakal bikin new object
+
         public string UserName;
         public string Password;
+        public float tagihan = 0;
+
+        public void plus_tagihan()
+        {
+            tagihan += 10000;
+
+        }
     }
 }
