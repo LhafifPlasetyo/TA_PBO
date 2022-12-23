@@ -43,12 +43,13 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Data_Game = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Data_Game)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -71,16 +72,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 109);
+            this.button2.Location = new System.Drawing.Point(176, 108);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 39);
+            this.button2.Size = new System.Drawing.Size(73, 92);
             this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
+            this.button2.Text = "Naruto Ultimate Ninja Storm 4";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(154, 45);
+            this.pictureBox2.Location = new System.Drawing.Point(177, 44);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 58);
             this.pictureBox2.TabIndex = 4;
@@ -114,10 +116,11 @@
             // 
             this.button3.Location = new System.Drawing.Point(294, 121);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 27);
+            this.button3.Size = new System.Drawing.Size(74, 56);
             this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
+            this.button3.Text = "eFootball 2022";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -125,8 +128,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 31);
             this.button4.TabIndex = 9;
-            this.button4.Text = "button4";
+            this.button4.Text = "GTA5 ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -134,8 +138,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 25);
             this.button5.TabIndex = 10;
-            this.button5.Text = "button5";
+            this.button5.Text = "WWE 2K22";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -183,21 +188,22 @@
             this.button6.Text = "Konfirmasi";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // Data_Game
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(354, 196);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(187, 164);
-            this.listBox1.TabIndex = 18;
+            this.Data_Game.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Data_Game.Location = new System.Drawing.Point(413, 205);
+            this.Data_Game.Name = "Data_Game";
+            this.Data_Game.RowHeadersWidth = 51;
+            this.Data_Game.RowTemplate.Height = 24;
+            this.Data_Game.Size = new System.Drawing.Size(120, 161);
+            this.Data_Game.TabIndex = 18;
             // 
             // Menuform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.Data_Game);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
@@ -221,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Data_Game)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,6 +250,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView Data_Game;
     }
 }

@@ -40,3 +40,4 @@ C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.cspr
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Admin.resources
