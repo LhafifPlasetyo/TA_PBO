@@ -13,6 +13,10 @@ namespace WindowsFormsApp3
 {
     public partial class FormAdmin : Form
     {
+        public FormAdmin()
+        {
+            InitializeComponent();
+        }
 
         private SqlCommand cmd;
         private DataSet ds;
@@ -21,14 +25,52 @@ namespace WindowsFormsApp3
 
         Koneksi Konn = new Koneksi();
 
-
-        public FormAdmin()
+        private void RegisterAdmin_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
 
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            String username, u_password;
 
-        private void RegisterAdmin_Click(object sender, EventArgs e)
+            username = TxtBoxt_UserName.Text;
+            u_password = TxtBox_Password.Text;
+
+            SqlConnection conn = Konn.GetConn();
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("Select * from accountAdmin_table where USERNAME = '" + TxtBoxt_UserName.Text + "'and PASSWORD = '" + TxtBox_Password.Text + "'", conn);
+
+
+            DataTable dTable = new DataTable();
+            adapter.Fill(dTable);
+
+            if(dTable.Rows.Count > 0)
+            {
+                username = TxtBoxt_UserName.Text;
+                u_password = TxtBox_Password.Text;
+                Menuform form2 = new Menuform();
+                form2.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show ("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtBoxt_UserName.Clear();
+                TxtBox_Password.Clear();
+                TxtBoxt_UserName.Focus();
+            }
+               
+                
+        }
+
+        private void Label_Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBox_Password_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -43,28 +85,6 @@ namespace WindowsFormsApp3
 
         }
 
-        private void Label_Password_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBox_Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_button_Click(object sender, EventArgs e)
-        {
-            string username, u_password;
-
-            username = TxtBoxt_UserName.Text;
-            u_password = TxtBox_Password.Text;
-
-
-            SqlConnection conn = Konn.GetConn();
-            conn.Open();
-        }
-
         private void register_button_Click(object sender, EventArgs e)
         {
             if (TxtBoxt_UserName.Text.Trim() == "" ^ TxtBox_Password.Text.Trim() == "")
@@ -77,7 +97,7 @@ namespace WindowsFormsApp3
                 conn.Open();
                 try
                 {
-                    cmd = new SqlCommand("Insert into account_table values ('" + TxtBoxt_UserName.Text + "','" + TxtBox_Password.Text + "')", conn);
+                    cmd = new SqlCommand("Insert into accountAdmin_table values ('" + TxtBoxt_UserName.Text + "','" + TxtBox_Password.Text + "')", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Akun berhasil di register");
                     TxtBoxt_UserName.Clear();
@@ -90,6 +110,5 @@ namespace WindowsFormsApp3
                 }
             }
         }
-
     }
 }
