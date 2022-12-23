@@ -41,3 +41,20 @@ C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.cspr
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Admin.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\bin\Debug\login_tabel.mdf
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\bin\Debug\login_tabel_log.ldf
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Admin.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormAdmin.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Menuform.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormAdmin.resources
