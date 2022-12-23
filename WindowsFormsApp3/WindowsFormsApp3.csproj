@@ -83,6 +83,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCustomerManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerManager.Designer.cs">
+      <DependentUpon>FormCustomerManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Koneksi.cs" />
     <Compile Include="login_tabelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerManager.resx">
+      <DependentUpon>FormCustomerManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menuform.resx">
       <DependentUpon>Menuform.cs</DependentUpon>
@@ -167,4 +176,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

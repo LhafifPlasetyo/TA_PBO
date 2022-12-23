@@ -44,7 +44,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.Data_Game = new System.Windows.Forms.DataGridView();
-            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -170,10 +169,11 @@
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 318);
+            this.textBox1.Location = new System.Drawing.Point(58, 389);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(360, 22);
             this.textBox1.TabIndex = 16;
@@ -191,29 +191,18 @@
             // Data_Game
             // 
             this.Data_Game.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data_Game.Location = new System.Drawing.Point(456, 200);
+            this.Data_Game.Location = new System.Drawing.Point(413, 205);
             this.Data_Game.Name = "Data_Game";
             this.Data_Game.RowHeadersWidth = 51;
             this.Data_Game.RowTemplate.Height = 24;
             this.Data_Game.Size = new System.Drawing.Size(120, 161);
             this.Data_Game.TabIndex = 18;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(474, 371);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 26);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Clear Item";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // Menuform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.Data_Game);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
@@ -262,6 +251,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView Data_Game;
-        private System.Windows.Forms.Button button7;
     }
 }

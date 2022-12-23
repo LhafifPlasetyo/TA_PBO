@@ -14,7 +14,7 @@ namespace WindowsFormsApp3
 {
     public partial class Menuform : Form
     {
-        float tagihan = 0 ;
+        float tagihan;
         Koneksi Konn = new Koneksi();
         private SqlCommand cmd;
         private DataSet ds;
@@ -29,8 +29,6 @@ namespace WindowsFormsApp3
         private void Menuform_Load(object sender, EventArgs e)
         {
             view_list();
-            
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,9 +37,9 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into item_list values ('FIFA 23')", conn);
+                cmd = new SqlCommand("insert into Catalogue_Table values ('FIFA 23')", conn);
                 cmd.ExecuteNonQuery();
-
+               
             }
             catch (Exception X)
             {
@@ -50,12 +48,14 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
-                plus_tagihan();
                 conn.Close();
             }
-
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into item_list values ('WWE 2K22')", conn);
+                cmd = new SqlCommand("insert into Catalogue_Table values ('WWE 2K22')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -79,7 +79,6 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
-                plus_tagihan();
                 conn.Close();
             }
         }
@@ -90,7 +89,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into item_list values ('Naruto Ultimate Ninja Storm 4')", conn);
+                cmd = new SqlCommand("insert into Catalogue_Table values ('Naruto Ultimate Ninja Storm 4')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -101,7 +100,6 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
-                plus_tagihan();
                 conn.Close();
             }
         }
@@ -112,7 +110,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into item_list values ('eFootbal2022')", conn);
+                cmd = new SqlCommand("insert into Catalogue_Table values ('eFootbal2022')", conn);
                 cmd.ExecuteNonQuery();
                
             }
@@ -123,7 +121,6 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
-                plus_tagihan();
                 conn.Close();
             }
         }
@@ -134,7 +131,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("insert into item_list values ('GTA V')", conn);
+                cmd = new SqlCommand("insert into Catalogue_Table values ('GTA V')", conn);
                 cmd.ExecuteNonQuery();
 
             }
@@ -145,7 +142,6 @@ namespace WindowsFormsApp3
             finally
             {
                 view_list();
-                plus_tagihan();
                 conn.Close();
             }
         }
@@ -156,7 +152,7 @@ namespace WindowsFormsApp3
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("Select * from item_list", conn);
+                cmd = new SqlCommand("Select * from Catalogue_Table", conn);
                 ds = new DataSet();
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "Catalogue_Table");
@@ -170,41 +166,6 @@ namespace WindowsFormsApp3
             }
             finally
             {
-                conn.Close();
-            }
-        }
-
-        void plus_tagihan()
-        {
-            tagihan += 10000;
-            textBox1.Text = tagihan.ToString();
-
-            if (checkBox1.CheckState==CheckState.Checked)
-            {
-                tagihan += 40000; 
-            }
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = Konn.GetConn();
-
-            try
-            {
-                conn.Open();
-                cmd = new SqlCommand("DELETE FROM item_list ", conn);
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception X)
-            {
-                MessageBox.Show(X.ToString());
-            }
-            finally
-            {
-                view_list();
-                tagihan = 0;
                 conn.Close();
             }
         }

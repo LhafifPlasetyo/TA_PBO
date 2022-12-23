@@ -49,7 +49,7 @@ namespace WindowsFormsApp3
             {
                 username = TxtBoxt_UserName.Text;
                 u_password = TxtBox_Password.Text;
-                Menuform form2 = new Menuform();
+                FormCustomerManager form2 = new FormCustomerManager();
                 form2.Show();
                 this.Hide();
 
