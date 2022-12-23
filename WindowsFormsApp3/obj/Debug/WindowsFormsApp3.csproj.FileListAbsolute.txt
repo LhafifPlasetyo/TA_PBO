@@ -57,3 +57,7 @@ D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.
 D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
 D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 D:\Ngodeeng\File C#\RentalPS TA PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+<<<<<<< HEAD
+C:\Users\HP\Source\Repos\TA_PBO\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormAdmin.resources
+=======
+>>>>>>> 2ac8a1cb2291cc00e32a4b74ef4f4d4e1efcc974
